@@ -1,0 +1,21 @@
+<div class="intro-copy">
+<p>We create, Eloborate stories from</p>
+<p>a single frame,Upload your</p>
+<p>image, it's that easy,</p>
+<p>AI-powered tales, instantly yours.</p>
+</div>
+<div class="headers">
+<section id="section1">
+  <h1>Kids</h1>
+</section>
+<section id="section2">
+  <h1>Action</h1>
+</section>
+<section id="section3">
+  <h1>Romance</h1>
+</section>
+<section id="section4"><h1>Fantasy</h1></section>
+<section id="section5"><h1>Horror</h1></section>
+<section id="section6"><h1>Shakespeare</h1></section>
+<section id="section7"><h1>Sci-fi</h1></section>
+</div>

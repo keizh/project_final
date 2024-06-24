@@ -1,0 +1,416 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  font-family: "DELIRIUM NCV";
+  background-color: #000;
+}
+
+/* Hide the horizontal scrollbar */
+body {
+  overflow-x: hidden;
+}
+
+/* Customize the scrollbar for the y-axis */
+body::-webkit-scrollbar {
+  width: 12px; /* Width of the vertical scrollbar */
+}
+
+body::-webkit-scrollbar-thumb {
+  background: #888; /* Color of the scrollbar thumb */
+}
+
+body::-webkit-scrollbar-thumb:hover {
+  background: #555; /* Color of the scrollbar thumb when hovered */
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+section.sticky {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: #5546ff;
+}
+
+nav {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  padding: 2em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo a {
+  text-decoration: none;
+  text-transform: uppercase;
+  font-family: "DELIRIUM NCV";
+  font-size: 60px;
+  color: #bfff00;
+}
+
+.links {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+}
+
+.links a {
+  font-family: "DELIRIUM NCV";
+  text-decoration: none;
+  text-transform: uppercase;
+  padding: 0.5em 1em;
+  font-size: 13px;
+  color: #fff;
+  border: 1px solid #fff;
+  border-radius: 20px;
+}
+
+.header {
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  transform: translateY(-50%) translateX(-50%);
+  /* z-index: 10; */
+}
+
+.header h1 {
+  text-transform: uppercase;
+  font-family: "DELIRIUM NCV";
+  font-size: 45vw;
+  font-weight: 400;
+  color: #fff;
+  line-height: 100%;
+}
+
+.tracker {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  padding: 2em 0;
+  /* z-index: 100; */
+}
+
+.emoji {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /* width: 20.55vw; */
+  width: 350px;
+  height: 350px;
+  /* height: 20.55vw; */
+  background: url(./sphere.png) no-repeat 50% 50%;
+  background-size: cover;
+  border-radius: 100%;
+}
+
+.emoji-face {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /* width: 225px; */
+  width: 13vw;
+  /* height: 200px; */
+  height: 11vw;
+  display: flex;
+  flex-direction: column;
+}
+
+.eyes,
+.mouth-wrapper {
+  flex: 1;
+}
+
+.eyes {
+  display: flex;
+  justify-content: space-between;
+  padding-inline: 1vw;
+}
+
+.eyes img {
+  width: 4.5vw;
+  /* width: 100px; */
+  height: 4.5vw;
+  /* height: 100px; */
+  animation: rotateEyes 5s infinite linear;
+}
+
+.mouth-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.mouth {
+  width: 2.5vw;
+  /* width: 40px; */
+  height: 1.6vw;
+  /* height: 40px; */
+  border-radius: 50px;
+  background-color: #000;
+  animation: wonderFace 2s infinite cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+@keyframes rotateEyes {
+  0% {
+    rotate: 0deg;
+  }
+  100% {
+    rotate: 360deg;
+  }
+}
+
+.section-header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 2em;
+}
+
+@keyframes wonderFace {
+  0% {
+    height: 1.6vw;
+    /* height: 40px; */
+  }
+
+  50% {
+    height: 3.15vw;
+    /* height: 80px; */
+  }
+
+  100% {
+    /* height: 1.6vw; */
+    height: 40px;
+  }
+}
+
+/* second page */
+
+.website-content {
+  position: absolute;
+  top: 100vh;
+  width: 100%;
+  height: fit-content;
+  background: #fff7f1;
+  padding: 6em 2em;
+  /* background: linear-gradient(135deg, #030637, #3c0753, #720455, #720455);
+  background-size: 400% 400%;
+  animation: gradientAnimation 10s ease infinite;
+  color: white; */
+}
+
+/* @keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+} */
+
+.website-content > h1 {
+  font-family: "DELIRIUM NCV";
+  font-size: 10vw;
+  padding-inline: 10vw;
+  width: 50%;
+  display: flex;
+  margin-inline: auto;
+  justify-content: center;
+  margin-bottom: 25px;
+  color: white;
+}
+
+#extra {
+  width: 50%;
+  margin-inline: auto;
+  font-size: 20px;
+  font-family: "Times New Roman";
+}
+
+.genresBox {
+  padding-inline: 10vw;
+  padding-block: 2.5vw;
+  display: flex;
+  flex-direction: column;
+  /* background-color: red; */
+  gap: 25px;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.row > img {
+  height: 35vw;
+  width: 25vw;
+  object-fit: cover;
+  border-radius: 10px;
+  z-index: 10;
+}
+
+.row div h2 {
+  font-family: "Kapvile Demo";
+  font-size: 10vw;
+}
+
+.row > div {
+  width: 300px;
+  z-index: 10;
+  color: white;
+  padding: 20px;
+  backdrop-filter: invert(10%);
+  border-radius: 10px;
+}
+
+.animated-text {
+  background: linear-gradient(135deg, #ff5373, #ffc858, #17e7ff, #6d3bff);
+  animation: gradientAnimation 10s ease infinite;
+  border-radius: 20px;
+}
+
+.animated-text2 {
+  background: linear-gradient(135deg, #6d3bff, #17e7ff, #ffc858, #ff5373);
+  animation: gradientAnimation 10s ease infinite;
+  border-radius: 20px;
+}
+
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* ----------------- */
+
+.page3 {
+  height: 300vh;
+  width: 100%;
+  position: absolute;
+  z-index: 10;
+  margin-bottom: 50vh;
+  background: #5546ff;
+}
+
+.animated-text3 {
+  background: linear-gradient(135deg, #ff5373, #ffc858, #17e7ff, #6d3bff);
+  animation: gradientAnimation 10s ease infinite;
+}
+
+/* .page4 {
+  height: 100vh;
+  width: 100%;
+  position: sticky;
+  z-index: 5;
+  background-color: red;
+}
+ */
+
+.page3 h1 {
+  padding-block: 2vw;
+  font-family: "DELIRIUM NCV";
+  font-size: 10vw;
+  color: white;
+
+  width: fit-content;
+  margin-inline: auto;
+  /* background-color: red; */
+}
+
+.imageBackgound {
+  display: flex;
+  padding-block: 2vw;
+  padding-inline: 15vw;
+  gap: 100px;
+}
+
+.image {
+  height: auto;
+  width: 30vw;
+}
+.image img {
+  border-radius: 10px;
+}
+
+.background {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 50px;
+  /* font-family: "Teko"; */
+  backdrop-filter: invert(10%);
+  border-radius: 30px;
+  padding: 1vw;
+  font-weight: 500;
+  width: 40%;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.generatedStories {
+  display: flex;
+  margin-inline: 8vw;
+  justify-content: space-between;
+  margin-top: 100px;
+}
+
+/* .generatedStories > div {
+  height: 100px;
+  width: auto;
+} */
+
+.generatedStories div:nth-child(2) {
+  display: flex;
+  flex-direction: column;
+  width: 75%;
+  gap: 50px;
+}
+
+.art1 {
+  font-size: 20px;
+}
+
+#img123 {
+  position: sticky;
+  top: 10%;
+  height: 200px;
+  width: auto;
+}
